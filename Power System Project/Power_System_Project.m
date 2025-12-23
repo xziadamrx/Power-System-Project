@@ -149,7 +149,6 @@ end
         Vs = A * Vr/sqrt(3) + B * Ir; 
         Vs_mag = abs(Vs) * sqrt(3);
         Vs_angle = angle(Vs); 
-        A_s = abs(A);
         disp('------------ABCD Constants (Generalised Circuit Constants of TL)--------------'); 
         disp(['A = ', num2str(A), ' dimensionless']); 
         disp(['B = ', num2str(B), ' ohm']); 
@@ -164,7 +163,6 @@ end
         Vs = A * Vr/sqrt(3) + B * Ir; 
         Vs_mag = abs(Vs) * sqrt(3);
         Vs_angle = angle(Vs); 
-        A_s = abs(A);
         disp('------------ABCD Constants (Generalised Circuit Constants of TL)--------------'); 
         disp(['A = ', num2str(A), ' dimensionless']); 
         disp(['B = ', num2str(B), ' ohm']); 
@@ -278,3 +276,4 @@ end
 
 
 fprintf('\n=========== END OF PROGRAM ===========\n');
+
