@@ -47,11 +47,11 @@ I_r = conj(S) / (sqrt(3) * Vr);
   % Material properties
     Eo    = 8.85*10^-12;                   % Permittivity of air
    disp('Enter the material properties:');
-Ro_25 = input('Enter the resistivity of the conductor at 25°C (Ohm*m) = ');  % Resistivity at 25°C ( resistivity of Al at 25 *C =1.72 * 10^-8 ) most common
+Ro_25 = input('Enter the resistivity of the conductor at 25Â°C (Ohm*m) = ');  % Resistivity at 25Â°C ( resistivity of Al at 25 *C =1.72 * 10^-8 ) most common
 
     % User Inputs
     Length  = tr2;  
-    Tamb    = input('Ambiant temperature in (°C) = '); % Ambient temperature
+    Tamb    = input('Ambiant temperature in (Â°C) = '); % Ambient temperature
     Sp      = input('Spiralling factor = ');           % Spiralling factor
     SKeff   = input('Skin effect factor = ');          % Skin effect factor
     T_const = input('conductor Temperature constant= '); 
@@ -98,7 +98,7 @@ end
         GMRL = nthroot(rb * exp(-0.25) * s^2 , 3) * 10^-2;
         GMRC = nthroot(rb * s^2 , 3) * 10^-2;
     elseif Nb == 4   
-        GMRL = nthroot(rb * exp(-0.25* s^3 * sqrt(2))^4, 4) * 10^-2;
+        GMRL = nthroot(rb * exp(-0.25)* s^3 * sqrt(2), 4) * 10^-2;
         GMRC = nthroot(rb * s^3 * sqrt(2),4) * 10^-2;
     end
 
@@ -274,6 +274,7 @@ fprintf('Voltage Regulation = %.2f %%\n', voltage_regulation);
 fprintf('Efficiency          = %.2f %%\n', efficiency);
 end
 %% ====================================================
+
 
 
 fprintf('\n=========== END OF PROGRAM ===========\n');
